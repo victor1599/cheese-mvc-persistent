@@ -15,7 +15,7 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("category")
 
-public class CategoryControllers {
+public class CategoryController {
     @Autowired
     private CategoryDao categoryDao;
 
@@ -38,12 +38,11 @@ public class CategoryControllers {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String add(@ModelAttribute @Valid Category category, Errors errors, Model model){
         if (errors.hasErrors()){
-            model.addAttribute("title", "Add Categoty");
+            model.addAttribute("title", "Add Category");
             return "category/add";
         }
         categoryDao.save(category);
         return "redirect:";
     }
 }
-
 
