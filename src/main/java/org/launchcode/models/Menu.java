@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 public class Menu {
+
     @Id
     @GeneratedValue
     private int id;
@@ -21,11 +22,11 @@ public class Menu {
     @ManyToMany
     private List<Cheese> cheeses;
 
-    public Menu(String name){this.name = name; }
+    public Menu(String name){ this.name = name; }
 
-    public Menu(){ }
+    public Menu() { }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
@@ -49,4 +50,3 @@ public class Menu {
         cheeses.add(item);
     }
 }
-

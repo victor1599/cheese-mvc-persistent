@@ -14,7 +14,6 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("category")
-
 public class CategoryController {
     @Autowired
     private CategoryDao categoryDao;
@@ -41,8 +40,9 @@ public class CategoryController {
             model.addAttribute("title", "Add Category");
             return "category/add";
         }
+
         categoryDao.save(category);
         return "redirect:";
     }
-}
 
+}

@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-
 public class Category {
+
     @Id
     @GeneratedValue
     private int id;
@@ -25,15 +25,17 @@ public class Category {
         this.name = name;
     }
 
-    public String getName(){
+    public Category(){}
+
+    public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
+
     public int getId() {
         return id;
     }
-
 }
